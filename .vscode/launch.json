@@ -9,7 +9,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/projectFour",
+            "cwd": "${workspaceFolder}/week6/Superhero",
             "args": [
                 "runserver",
                 "8002"
@@ -22,7 +22,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Gallery",
+            "cwd": "${workspaceFolder}/week6/Superhero",
             "args": [
                 "test"
             ],
@@ -34,7 +34,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Gallery",
+            "cwd": "${workspaceFolder}/week6/Superhero",
             "args": [
                 "plan"
             ],
@@ -46,7 +46,7 @@
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Gallery",
+            "cwd": "${workspaceFolder}/week6/Superhero",
             "args": [
                 "pages"
             ],
