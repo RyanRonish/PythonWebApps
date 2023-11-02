@@ -13,6 +13,10 @@ urlpatterns = [
     path('<int:pk>/',       HeroUpdateView.as_view(),  name='hero_edit'),
     path('<int:pk>/delete', HeroDeleteView.as_view(),  name='hero_delete'),
 
+    # Login/Logout code
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/<int:pk>/',          UserUpdateView.as_view(),   name='account_edit'),
+    path('accounts/signup/',            UserAddView.as_view(),      name='signup'),
 
     # Admin views for users
     # path('admin/', admin.site.urls),
