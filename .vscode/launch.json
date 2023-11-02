@@ -5,11 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run server",
+            "name": "Python: Django",
             "type": "python",
             "request": "launch",
             "program": "manage.py",
-            "cwd": "${workspaceFolder}/Gallery",
+            "cwd": "${workspaceFolder}/projectFour",
             "args": [
                 "runserver",
                 "8002"
