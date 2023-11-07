@@ -12,7 +12,7 @@
             "cwd": "${workspaceFolder}/week8/Superhero",
             "args": [
                 "runserver",
-                "8002"
+                "8001"
             ],
             "django": true,
             "justMyCode": true
