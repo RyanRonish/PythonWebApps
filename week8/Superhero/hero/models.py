@@ -16,3 +16,4 @@ class Superhero(models.Model):
     def get_absolute_url(self):
         return reverse_lazy('hero_list')
     
+    
