@@ -1,3 +1,5 @@
 from django.test import TestCase
 
-# Create your tests here.
+class HeroAppTes(SimpleTestCase):
+    def test_django(self):
+        self.assertTrue(False)
