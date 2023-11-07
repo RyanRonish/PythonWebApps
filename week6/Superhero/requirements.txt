@@ -10,5 +10,5 @@ requests
 pillow
 sqlparse
 whitenoise
-crispy-forms-bootstrap5
+bootstrap5
 
