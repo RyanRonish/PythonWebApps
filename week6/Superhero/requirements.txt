@@ -10,5 +10,4 @@ requests
 pillow
 sqlparse
 whitenoise
-bootstrap5
 
