@@ -1,5 +1,7 @@
 {% extends 'theme.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block title %}
 Edit Hero
 {% endblock title %}
@@ -9,7 +11,7 @@ Edit Hero
 
 <div class="container m-5">
 
-    {% load crispy_forms_tags %}
+   <!--{% load crispy_forms_tags %}-->
 
 
     <form action="" method="post">{% csrf_token %}
@@ -17,7 +19,7 @@ Edit Hero
         {{ form|crispy }}
 
         <button class="btn btn-success m-5" type="submit">Save Record</button>
-        <a class="btn btn-success m-5" href="delete">Delete Record</a>
+        <a class="btn btn-success m-5" href="/{{ object.pk }}/delete">Delete Record</a>
 
     </form>
 
