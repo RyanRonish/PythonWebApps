@@ -13,15 +13,13 @@
 
 <body class="bg-dark text-light">
 
+    {% block header %}
+    {% include '_header.html' %}
+    {% endblock header %}
+
     {% block navbar %}
     {% include '_navbar.html' %}
     {% endblock navbar %}
-
-
-    <header class="bg-primary p-5 mb-5">
-        <h1>Superhero Tracker</h1>
-        <h2>Superhero Application</h2>
-    </header>
 
     <div class="container m-5">
         <div class="card bg-light text-dark p-5">
