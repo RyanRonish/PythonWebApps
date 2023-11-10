@@ -6,38 +6,23 @@
 
 {% block content %}
 <div class="container-fluid">
-    {% for hero in object_list %}
-        <div class="card col-lg-6">
-            <div class="card-header person">
-                {{ hero.name }}
+    <div class="row"> 
+        {% for hero in object_list %}
+            <div class="col-lg-6">
+                <div class="card">
+                    {% if hero.image %}
+                    <img src="/media/{{ hero.image.image }}" alt="{{ hero.image.title }}" width="100">
+                    {% else %}
+                    No image available
+                    {% endif %}
+                    <div class="card-body">
+                        <h5>{{ hero.title }}</h5>
+                        <h6>{{ hero.author }}</h6>
+                        <p>{{ hero.article }}</p>
+                    </div>
+                </div>    
             </div>
-                <div class="card-body">
-                    <table class="table">
-                    <tr>
-                        <td>Title</td>
-                        <td>{{ hero.title }}</td>
-                    </tr>
-                    <tr>
-                        <td>Author</td>
-                        <td>{{ hero.author }}</td>
-                    </tr>
-                    <tr>
-                        <td>Picture</td>
-                        <td>
-                            {% if hero.image %}
-                                <img src="/media/{{ hero.image.image }}" alt="{{ hero.image.title }}" width="100">
-                            {% else %}
-                                No image available
-                            {% endif %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Article</td>
-                        <td>{{ hero.article }}</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock content %}

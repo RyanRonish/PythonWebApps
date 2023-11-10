@@ -30,6 +30,7 @@ class HeroUpdateView(LoginRequiredMixin, UpdateView):
     model = Superhero
     fields = '__all__'
 
+
 class HeroArticleView(TemplateView):
     template_name = 'hero/article.html'
     model = Superhero
