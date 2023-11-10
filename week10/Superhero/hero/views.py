@@ -18,21 +18,32 @@ class HeroDetailView(DetailView):
     template_name = 'hero/detail.html'
     model = Superhero
 
-class HeroArticleView(TemplateView):
-    template_name = 'hero/article.html'
-    model = Superhero
-
 
 class HeroCreateView(LoginRequiredMixin, CreateView):
     template_name = "hero/add.html"
     model = Superhero
-    fields = '__all__'
+    fields = ['name', 'identity', 'image', 'description', 'strengths', 'weaknesses']
 
 
 class HeroUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "hero/edit.html"
     model = Superhero
-    fields = '__all__'
+    fields = ['name', 'identity', 'image', 'description', 'strengths', 'weaknesses']
+
+class HeroArticleView(TemplateView):
+    template_name = 'hero/article/article.html'
+    model = Superhero
+    fields = ['title', 'image', 'author', 'article']
+
+class HeroArticleUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = 'hero/article/article_edit.html'
+    model = Superhero
+    fields = ['title', 'image', 'author', 'article']
+
+class HeroArticleUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = "hero/edit.html"
+    model = Superhero
+    fields = ['title', 'image', 'author', 'article']
 
 
 class HeroDeleteView(LoginRequiredMixin, DeleteView):

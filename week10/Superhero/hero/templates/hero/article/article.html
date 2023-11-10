@@ -2,7 +2,7 @@
 
 
 {% block title %}
-Hero Details
+Hero Articles
 {% endblock title %}
 
 
@@ -20,16 +20,12 @@ Hero Details
 
             <table class="table">
                 <tr>
-                    <td>Name</td>
-                    <td><a href="/{{ object.pk }}/">{{ object.name }}</a></td>
+                    <td>Title</td>
+                    <td><a href="/{{ object.pk }}/">{{ object.title }}</a></td>
                 </tr>
                 <tr>
-                    <td>Identity</td>
-                    <td>{{ object.identity }}</td>
-                </tr>
-                <tr>
-                    <td>Description</td>
-                    <td>{{ object.description }}</td>
+                    <td>Author</td>
+                    <td>{{ object.author }}</td>
                 </tr>
                 <tr>
                     <td>
@@ -44,22 +40,17 @@ Hero Details
                     </td> 
                 </tr>
                 <tr>
-                    <td>Strength</td>
-                    <td>{{ object.strengths }}</td>
-                </tr>
-                <tr>
-                    <td>Weakness</td>
-                    <td>{{ object.weaknesses }}</td>
+                    <td>Article</td>
+                    <td>{{ object.article }}</td>
                 </tr>
             </table>
-
-            <p>
-                <a href="/{{ object.pk }}/edit" class="btn btn-success m-5">Edit Hero</a>
-                
-            </p>
         </div>
-
     </div>
+
+    <p>
+        <a href="/{{ object.pk }}/article_edit" class="btn btn-success m-5">Edit Article</a>
+        
+    </p>
 
 </div>
 
