@@ -35,11 +35,6 @@ class HeroArticleView(TemplateView):
     model = Superhero
     fields = ['title', 'image', 'author', 'article']
 
-class HeroArticleUpdateView(LoginRequiredMixin, UpdateView):
-    template_name = "hero/edit.html"
-    model = Superhero
-    fields = ['title', 'image', 'author', 'article']
-
 
 class HeroDeleteView(LoginRequiredMixin, DeleteView):
     model = Superhero
@@ -58,6 +53,11 @@ class UserAddView(CreateView):
     form_class = UserCreationForm
     success_url = reverse_lazy('login')
     template_name = 'registration/add.html'
+
+class UserHomeView(CreateView):
+    template_name = "registration/edit.html"
+    model = User
+    fields = ['first_name', 'last_name', 'username', 'email']
 
 class DocumentView(TemplateView):
     template_name = 'document.html'

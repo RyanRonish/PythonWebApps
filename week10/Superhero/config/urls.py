@@ -1,6 +1,6 @@
 from django.urls import path, include
 from hero.views import HeroCreateView, HeroDeleteView, HeroArticleView, HeroDetailView, HeroListView, HeroUpdateView, UserAddView, UserUpdateView
-from hero.views import DocumentView, HeroArticleUpdateView
+from hero.views import DocumentView, UserHomeView
 from django.contrib import admin
 
 urlpatterns = [
@@ -16,6 +16,7 @@ urlpatterns = [
 
     # Login/Logout code
     path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/profile/', UserHomeView.as_view(), name='profile_home'),
     path('accounts/<int:pk>',          UserUpdateView.as_view(),   name='account_edit'),
     path('accounts/signup/',            UserAddView.as_view(),      name='signup'),     
 
