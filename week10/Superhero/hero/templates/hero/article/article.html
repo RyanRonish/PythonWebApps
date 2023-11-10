@@ -8,50 +8,48 @@ Hero Articles
 
 {% block content %}
 
-<div class="row">
+    {% for hero in object_list %}
 
-    <div class="card col-lg">
+        <div class="container-fluid">
 
-        <div class="card-header person">
-            HERO
+            <div class="card col-lg-6">
+
+                <div class="card-header person">
+                    {{ object.name }}
+                </div>
+                <div class="card-body">
+
+                    {% for hero in object_list %}
+                    <table class="table">
+                        <tr>
+                            <td>Title</td>
+                            <td><a href="/{{ object.pk }}/">{{ object.title }}</a></td>
+                        </tr>
+                        <tr>
+                            <td>Author</td>
+                            <td>{{ object.author }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Picture
+                            </td>
+                            <td>
+                            {% if hero.image %}
+                            <img src="/media/{{ hero.image.image }}" alt="{{ hero.image.title }}" width="100">
+                            {% else %}
+                            No image available
+                            {% endif %}
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>Article</td>
+                            <td>{{ object.article }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="card-body">
 
-
-            <table class="table">
-                <tr>
-                    <td>Title</td>
-                    <td><a href="/{{ object.pk }}/">{{ object.title }}</a></td>
-                </tr>
-                <tr>
-                    <td>Author</td>
-                    <td>{{ object.author }}</td>
-                </tr>
-                <tr>
-                    <td>
-                        Picture
-                    </td>
-                    <td>
-                    {% if hero.image %}
-                    <img src="/media/{{ hero.image.image }}" alt="{{ hero.image.title }}" width="100">
-                    {% else %}
-                    No image available
-                    {% endif %}
-                    </td> 
-                </tr>
-                <tr>
-                    <td>Article</td>
-                    <td>{{ object.article }}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <p>
-        <a href="/{{ object.pk }}/article_edit" class="btn btn-success m-5">Edit Article</a>
-        
-    </p>
-
-</div>
+    {% endfor %}
 
 {% endblock content %}

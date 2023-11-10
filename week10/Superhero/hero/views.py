@@ -28,15 +28,10 @@ class HeroCreateView(LoginRequiredMixin, CreateView):
 class HeroUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "hero/edit.html"
     model = Superhero
-    fields = ['name', 'identity', 'image', 'description', 'strengths', 'weaknesses']
-
+    fields = '__all__'
+    
 class HeroArticleView(TemplateView):
     template_name = 'hero/article/article.html'
-    model = Superhero
-    fields = ['title', 'image', 'author', 'article']
-
-class HeroArticleUpdateView(LoginRequiredMixin, UpdateView):
-    template_name = 'hero/article/article_edit.html'
     model = Superhero
     fields = ['title', 'image', 'author', 'article']
 
