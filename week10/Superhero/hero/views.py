@@ -29,9 +29,9 @@ class HeroUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "hero/edit.html"
     model = Superhero
     fields = '__all__'
-    
+
 class HeroArticleView(TemplateView):
-    template_name = 'hero/article/article.html'
+    template_name = 'hero/article.html'
     model = Superhero
     fields = ['title', 'image', 'author', 'article']
 
