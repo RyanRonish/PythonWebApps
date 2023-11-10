@@ -13,13 +13,21 @@
 
 <body class="bg-dark text-light">
 
+    {% block navbar %}
+    {% include '_navbar.html' %}
+    {% endblock navbar %}
+
     {% block header %}
     {% include '_header.html' %}
     {% endblock header %}
 
-    {% block navbar %}
-    {% include '_navbar.html' %}
-    {% endblock navbar %}
+    {% block carousel %}
+    {% include '_carousel.html' %}
+    {% endblock carousel %}
+
+    {% block tabs %}
+    {% include '_tabs.html' %}
+    {% endblock tabs %}
 
     <div class="container m-5">
         <div class="card bg-light text-dark p-5">
