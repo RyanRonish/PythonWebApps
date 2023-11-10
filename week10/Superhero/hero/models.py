@@ -17,3 +17,14 @@ class Superhero(models.Model):
     def get_absolute_url(self):
         return reverse_lazy('hero_list')
     
+class User(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    username = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.identity
+    
+    def get_absolute_url(self):
+        return reverse_lazy('account_edit')
