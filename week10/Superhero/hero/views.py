@@ -31,10 +31,10 @@ class HeroUpdateView(LoginRequiredMixin, UpdateView):
     fields = '__all__'
 
 
-class HeroArticleView(TemplateView):
+class HeroArticleView(DetailView):
     template_name = 'hero/article.html'
     model = Superhero
-    fields = ['title', 'image', 'author', 'article']
+    fields = ['image', 'title', 'author', 'article']
 
 
 class HeroDeleteView(LoginRequiredMixin, DeleteView):
@@ -55,7 +55,7 @@ class UserAddView(CreateView):
     success_url = reverse_lazy('login')
     template_name = 'registration/add.html'
 
-class UserHomeView(CreateView):
+class UserHomeView(LoginRequiredMixin, UpdateView):
     template_name = "registration/edit.html"
     model = User
     fields = ['first_name', 'last_name', 'username', 'email']
