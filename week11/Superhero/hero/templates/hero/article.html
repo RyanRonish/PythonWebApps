@@ -1,0 +1,28 @@
+{% extends 'theme.html' %}
+
+{% block title %}
+    Hero Articles
+{% endblock title %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row"> 
+        {% for hero in object_list %}
+            <div class="col-lg-6">
+                <div class="card">
+                    {% if hero.image %}
+                    <img src="/media/{{ hero.image.image }}" alt="{{ hero.image.title }}" width="100">
+                    {% else %}
+                    No image available
+                    {% endif %}
+                    <div class="card-body">
+                        <h5>{{ hero.title }}</h5>
+                        <h6>{{ hero.author }}</h6>
+                        <p>{{ hero.article }}</p>
+                    </div>
+                </div>    
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
