@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Black Widow",
+        "identity": "Natasha Romanoff",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    },
+    {
+        "id": 2,
+        "name": "Hulk",
+        "identity": "Bruce Banner",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    },
+    {
+        "id": 3,
+        "name": "Iron Man",
+        "identity": "Tony Stark",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    },
+    {
+        "id": 4,
+        "name": "The Flash",
+        "identity": "Barry Allen",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    },
+    {
+        "id": 5,
+        "name": "Ant-man",
+        "identity": "Scott Lang",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    }
+]

@@ -1,0 +1,77 @@
+[
+{
+    "model": "hero.superhero",
+    "pk": 1,
+    "fields": {
+        "name": "Black Widow",
+        "identity": "Natasha Romanoff",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    }
+},
+{
+    "model": "hero.superhero",
+    "pk": 2,
+    "fields": {
+        "name": "Hulk",
+        "identity": "Bruce Banner",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    }
+},
+{
+    "model": "hero.superhero",
+    "pk": 3,
+    "fields": {
+        "name": "Iron Man",
+        "identity": "Tony Stark",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    }
+},
+{
+    "model": "hero.superhero",
+    "pk": 4,
+    "fields": {
+        "name": "The Flash",
+        "identity": "Barry Allen",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    }
+},
+{
+    "model": "hero.superhero",
+    "pk": 5,
+    "fields": {
+        "name": "Ant-man",
+        "identity": "Scott Lang",
+        "description": "Description of Superhero",
+        "strengths": "Strengths...",
+        "weaknesses": "Weaknesses...",
+        "image": "NONE",
+        "title": "Article...",
+        "author": "Author...",
+        "article": "Write your article here..."
+    }
+}
+]
