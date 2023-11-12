@@ -87,18 +87,23 @@ WSGI_APPLICATION = 'config.wsgi.application'
     #}
 #}
 
+import os
+
+DATABASE_ENGINE = os.environ.get('DATABASE_ENGINE')
+DATABASE_NAME = os.environ.get('DATABASE_NAME')
+
 DATABASES = {
     'default': {
-        'ENGINE': environ.get('DATABASE_ENGINE'),
-        'NAME': environ.get('DATABASE_NAME'),
+        'ENGINE': os.environ.get('DATABASE_ENGINE'),
+        'NAME': os.environ.get('DATABASE_NAME'),
     }
 }
 
-POSTGRES_DB = environ.get("POSTGRES_DB")  # database name
-POSTGRES_PASSWORD = environ.get("POSTGRES_PASSWORD")  # database user password
-POSTGRES_USER = environ.get("POSTGRES_USER")  # database username
-POSTGRES_HOST = environ.get("POSTGRES_HOST")  # database host
-POSTGRES_PORT = environ.get("POSTGRES_PORT")  # database port
+POSTGRES_DB = os.environ.get("POSTGRES_DB")  # database name
+POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD")  # database user password
+POSTGRES_USER = os.environ.get("POSTGRES_USER")  # database username
+POSTGRES_HOST = os.environ.get("POSTGRES_HOST")  # database host
+POSTGRES_PORT = os.environ.get("POSTGRES_PORT")  # database port
 
 POSTGRES_READY = (
     POSTGRES_DB is not None
