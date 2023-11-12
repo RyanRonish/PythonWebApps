@@ -13,36 +13,17 @@
 
 <body class="bg-dark text-light">
 
+    {% block navbar %}
+    {% include '_navbar.html' %}
+    {% endblock navbar %}
 
-    <header class="bg-primary p-5 mb-5">
-        <h1>Superhero Tracker</h1>
-        <h2>Superhero Application</h2>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-light">
-            <div class="container">
-                <a class="navbar-brand text-light" href="/">Superhero App</a>
-                <ul class="navbar-nav text-light ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="{% url 'hero_list' %}">Heroes</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link  text-light " href="{% url 'logout' %}">Hello {{ user.username }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-light " href="{% url 'logout' %}">Log out</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link  text-light " href="{% url 'login' %}">Log In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-light " href="{% url 'signup' %}">Sign Up</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
-    </header>
+    {% block header %}
+    {% include '_header.html' %}
+    {% endblock header %}
+
+    {% block carousel %}
+    {% include '_carousel.html' %}
+    {% endblock carousel %}
 
     <div class="container m-5">
         <div class="card bg-light text-dark p-5">
@@ -57,6 +38,10 @@
 
         </div>
     </div>
+
+    {% block footer %}
+    {% include '_footer.html' %}
+    {% endblock footer %}
 </body>
 
 </html>
