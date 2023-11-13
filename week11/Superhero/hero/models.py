@@ -1,6 +1,9 @@
 from django.db import models
 from django.urls import reverse_lazy
 
+#def get_upload(instance, filename):
+    #return f'images/{filename}'
+
 
 class Superhero(models.Model):
     name = models.CharField(max_length=200, default="Name")
@@ -8,7 +11,8 @@ class Superhero(models.Model):
     description = models.TextField(default="Description of Superhero")
     strengths = models.CharField(max_length=200, default="Strengths...")
     weaknesses = models.CharField(max_length=200, default="Weaknesses...")
-    image = models.CharField(max_length=200, default="NONE")
+    #image = models.ImageField(null=True, blank=True, upload_to=get_upload)
+    image = models.CharField(max_length=50, default="Image...")
     title = models.CharField(max_length=50, default="Article...")
     author = models.CharField(max_length=50, default="Author...")
     article = models.TextField(default="Write your article here...")

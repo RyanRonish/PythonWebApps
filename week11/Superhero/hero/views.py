@@ -30,6 +30,11 @@ class HeroUpdateView(LoginRequiredMixin, UpdateView):
     model = Superhero
     fields = '__all__'
 
+#class PhotoCreateView(LoginRequiredMixin, CreateView):
+    #template_name = "photo/add.html"
+    #model = Superhero
+    #fields = ['image']
+
 
 class HeroArticleView(DetailView):
     template_name = 'hero/article.html'

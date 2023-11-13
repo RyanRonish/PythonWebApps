@@ -1,4 +1,6 @@
 from django.urls import path, include
+#from django.conf import settings
+#from django.conf.urls.static import static
 from hero.views import HeroCreateView, HeroDeleteView, HeroArticleView, HeroDetailView, HeroListView, HeroUpdateView, UserAddView, UserUpdateView
 from hero.views import DocumentView
 from django.contrib import admin
@@ -12,6 +14,8 @@ urlpatterns = [
     path('<int:pk>/delete', HeroDeleteView.as_view(),  name='hero_delete'),
     path('article', HeroArticleView.as_view(), name='article_list'),
 
+    #path('photo/add',                   PhotoCreateView.as_view(),  name='photo_add'),
+
     path('<str:doc>.md', DocumentView.as_view()),
 
     # Login/Logout code
@@ -21,4 +25,6 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),     
 
-]
+]  
+
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
