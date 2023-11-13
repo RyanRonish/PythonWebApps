@@ -7,7 +7,8 @@ from photos.models import Photo
 class Superhero(models.Model):
     name = models.CharField(max_length=200)
     identity = models.CharField(max_length=200)
-    image = models.ForeignKey(Photo, on_delete=models.CASCADE, null=True, blank=True)
+    image = models.ImageField(upload_to='images/', db_column='image_id', default="Image not available")  # Set db_column to 'image_id'
+    #image = models.ForeignKey(Photo, on_delete=models.CASCADE, null=True, blank=True)
     description = models.TextField(default="None")
     strengths = models.CharField(max_length=200, default="None")
     weaknesses = models.CharField(max_length=200, default="None")
