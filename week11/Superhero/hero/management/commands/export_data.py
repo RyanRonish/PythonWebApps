@@ -3,7 +3,7 @@ from django.core.management.base import BaseCommand
 from hero.models import Superhero
 
 class Command(BaseCommand):
-    record = 'Export data to CSV file'
+    #record = 'Export data to CSV file'
 
     def handle(self, *args, **options):
         # Specify the CSV file path
