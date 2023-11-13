@@ -12,10 +12,10 @@ class Command(BaseCommand):
 
 
 def save_data():
-    # print(Superhero.objects.all().values())
+    print(Superhero.objects.all().values())
 
-    # for hero in Superhero.objects.all().values():
-    #     print(hero)
+    for hero in Superhero.objects.all().values():
+        print(hero)
 
     data = [b for b in Superhero.objects.all().values()]
 

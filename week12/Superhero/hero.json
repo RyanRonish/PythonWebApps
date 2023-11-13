@@ -1,0 +1,14 @@
+[
+{
+    "model": "hero.superhero",
+    "pk": 2,
+    "fields": {
+        "name": "Iron Man",
+        "identity": "Tony Stark",
+        "image": 3,
+        "description": "None",
+        "strengths": "None",
+        "weaknesses": "None"
+    }
+}
+]
