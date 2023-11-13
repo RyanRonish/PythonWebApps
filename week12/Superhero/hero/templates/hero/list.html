@@ -21,11 +21,11 @@ List of Heroes
 
             {% for hero in object_list %}
             <tr>
-                <td><a href="/{{ hero.pk }}">{{ hero.name }}</a></td>
+                <td><a href="/{{ object.pk }}">{{ hero.name }}</a></td>
                 <td>{{ hero.identity }}</td>
                 <td>
                     {% if hero.image %}
-                    <img src="{{ hero.image.image }}" alt="{{ hero.image.title }}" width="100">
+                    <img src="{{ object.image.image }}" alt="{{ object.image.title }}" width="100">
                     {% else %}
                     No image available
                     {% endif %}
