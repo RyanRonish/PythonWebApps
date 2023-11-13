@@ -25,7 +25,7 @@ List of Heroes
                 <td>{{ hero.identity }}</td>
                 <td>
                     {% if hero.image %}
-                    <img src="/media/{{ hero.image.image }}" alt="{{ hero.image.title }}" width="100">
+                    <img src="/media/{{ hero.image.url }}" alt="{{ hero.image.title }}" width="100">
                     {% else %}
                     No image available
                     {% endif %}
